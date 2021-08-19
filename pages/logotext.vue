@@ -26,6 +26,7 @@ h1 {
   text-align: center;
   color: #fff;
   font-size: 50px;
+  font-family: Roboto,sans-serif
 }
 
 .image {
