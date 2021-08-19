@@ -1,7 +1,12 @@
 <template>
   <v-content class="box-content">
     <v-card class="login">
-      <v-bottom-navigation class="navigation-buttons" color="#6c3dff" horizontal grow>
+      <v-bottom-navigation
+        class="navigation-buttons"
+        color="#6c3dff"
+        horizontal
+        grow
+      >
         <v-btn class="button-menu-login">
           <span>LOGIN</span>
 
@@ -13,10 +18,16 @@
 
           <v-icon>mdi-account-multiple-plus</v-icon>
         </v-btn>
+
+         <v-btn class="button-menu-login" :to="'/dashboard'">
+          <span>DASHBOARD</span>
+
+          <v-icon>mdi-view-dashboard</v-icon>
+        </v-btn>
       </v-bottom-navigation>
 
       <v-card-title class="welcome-user">
-        <h1>Good Morning User</h1>
+        <h1>Good Morning, User</h1>
         <v-btn color="#ffffff" class="sign-in" block elevation="2">
           <v-icon dark left>mdi-google</v-icon> Sign in With Google</v-btn
         >
