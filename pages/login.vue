@@ -1,5 +1,5 @@
 <template>
-  <v-content class="box-content">
+  <v-main class="box-content">
     <v-card class="login">
       <v-bottom-navigation
         class="navigation-buttons"
@@ -72,7 +72,7 @@
         &copy; 2014-2020 Flatlogic, LLC. All rights reserved
       </v-col>
     </v-footer>
-  </v-content>
+  </v-main>
 </template>
 
 <script lang="ts">

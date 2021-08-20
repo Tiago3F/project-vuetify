@@ -65,14 +65,22 @@
 
       <v-avatar color="primary" size="45">
         <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
-      </v-avatar> 
+      </v-avatar>
     </v-app-bar>
-
 
     <v-main>
       <v-container fluid>
         <NavigationVcard />
-        <PerfilVcard />
+
+        <v-row no-gutters>
+          <v-col md="5">
+            <PerfilVcard />
+            <MediaProjectsVcard />
+          </v-col>
+          <v-col md="7">
+            <FilesVcard />
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
   </v-app>
@@ -80,8 +88,10 @@
 
 <script lang="ts">
 import Vue from "vue";
-import NavigationVcard from '../components/navigation-vcard.vue'
-import PerfilVcard from '../components/perfil-vcard.vue'
+import NavigationVcard from "../components/navigation-vcard.vue";
+import PerfilVcard from "../components/perfil-vcard.vue";
+import FilesVcard from "../components/files-vcard.vue";
+import MediaProjectsVcard from "../components/media-projects-vcard.vue";
 
 export default Vue.extend({
   data() {
@@ -113,8 +123,10 @@ export default Vue.extend({
   },
   components: {
     NavigationVcard,
-    PerfilVcard
-  }
+    PerfilVcard,
+    FilesVcard,
+    MediaProjectsVcard,
+  },
 });
 </script>
 

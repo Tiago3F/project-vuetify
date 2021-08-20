@@ -1,10 +1,10 @@
 <template>
   <div class="perfil-card">
-    <v-card max-width="500px">
+    <v-card height="290px" max-width="630px">
       <v-row>
         <v-col md="6">
           <v-img
-            class="ml-5"
+            class="ml-5 mt-8"
             height="200"
             width="200"
             src="https://templates-flatlogic.herokuapp.com/vue-material/img/photo.935dbda0.png"
@@ -47,8 +47,6 @@
         </v-col>
       </v-row>
     </v-card>
-    <br />
-    <h1>Área de Teste, Preciso estudar!!!!</h1>
   </div>
 </template>
 
