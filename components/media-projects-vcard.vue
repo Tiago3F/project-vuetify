@@ -107,19 +107,19 @@ export default {
     project: [
       {
         name: "Canary",
-        color: "#6c3dff",
+        color: "#a6b3ff",
       },
       {
         name: "Mercury",
-        color: "green",
+        color: "#ff5992",
       },
       {
         name: "Yosemite",
-        color: "#6c3dff",
+        color: "#68deb6",
       },
        {
         name: "Sputnik",
-        color: "#6c3dff",
+        color: "#ffc86f",
       },
       
     ],
