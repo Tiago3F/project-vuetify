@@ -226,7 +226,7 @@ export default {
     date2: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
       .toISOString()
       .substr(0, 10),
-    value: [423, 446, 675, 510, 590, 610, 760],
+    value: [423, 446, 800, 510, 1000, 610, 760],
   }),
   methods: {
     functionEvents(date) {
@@ -245,7 +245,10 @@ export default {
 .tasks-card {
   margin-top: 60px;
 }
-
+.span {
+  color: #3cd4a0;
+  font-size: 12px;
+}
 .calendar-card {
   margin-top: 50px;
   margin-left: -12px;
