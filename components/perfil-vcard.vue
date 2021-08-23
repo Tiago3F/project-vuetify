@@ -4,11 +4,12 @@
       <v-row>
         <v-col md="6">
           <v-img
-            class="ml-5 mt-8"
+            class="ml-5 mt-6"
             height="200"
             width="200"
             src="https://templates-flatlogic.herokuapp.com/vue-material/img/photo.935dbda0.png"
           ></v-img>
+         
         </v-col>
 
         <v-col md="5">
@@ -57,4 +58,5 @@
 .span {
   color: #6c3dff;
 }
+
 </style>

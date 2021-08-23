@@ -75,24 +75,26 @@
         <div class="card-projects">
           <v-card class="projects-card" height="330px" max-width="280px">
             <v-card-title>Projects </v-card-title>
-            <v-card-text>
-              <div class="font-weight-bold ml-8">Today</div>
-
-              <v-timeline align-top dense>
-                <v-timeline-item
-                  v-for="projects in project"
-                  :key="projects.name"
-                  :color="projects.color"
-                  small
-                >
-                  <div>
-                    <div class="font-weight-normal">
-                      <strong>{{ projects.name }}</strong>
-                    </div>
-                  </div>
-                </v-timeline-item>
-              </v-timeline>
+            <v-progress-circular
+              class="circular"
+              :rotate="180"
+              :size="100"
+              :width="15"
+              :value="value"
+              color="rgb(255, 92, 147)"
+              background-color="green lighten-1"
+            >
+              {{ value }}%
+            </v-progress-circular>
+            <v-card-text class="informations">
+              <span class="new"></span>New
+              <span class="progress"></span>Progress
+              <span class="completed"></span>Completed <br />
+              <span class="canceled"></span>Canceled
             </v-card-text>
+            <v-btn class="botton-detail" outlined color="#6c3dff">
+              Detail
+            </v-btn>
           </v-card>
         </div>
       </v-col>
@@ -103,27 +105,11 @@
 
 <script>
 export default {
-  data: () => ({
-    project: [
-      {
-        name: "Canary",
-        color: "#a6b3ff",
-      },
-      {
-        name: "Mercury",
-        color: "#ff5992",
-      },
-      {
-        name: "Yosemite",
-        color: "#68deb6",
-      },
-       {
-        name: "Sputnik",
-        color: "#ffc86f",
-      },
-      
-    ],
-  }),
+  data() {
+    return {
+      value: 70,
+    };
+  },
 };
 </script>
 
@@ -148,5 +134,80 @@ export default {
 
 .projects-card {
   margin-top: 50px;
+}
+.circular {
+  margin-top: 20px;
+  margin-left: 90px;
+}
+.informations {
+  margin-left: 20px;
+}
+.new {
+  background: rgb(83, 109, 254);
+  color: rgb(83, 109, 254);
+  height: 8px;
+  width: 8px;
+  left: 0px;
+  top: 0px;
+  border-width: 0px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 3px;
+  border-style: solid;
+}
+.progress {
+  background: rgb(255, 92, 147);
+  color: rgb(255, 92, 147);
+  height: 8px;
+  width: 8px;
+  left: 0px;
+  top: 0px;
+  border-width: 0px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 3px;
+  border-style: solid;
+}
+.completed {
+  background: rgb(60, 212, 160);
+  color: rgb(60, 212, 160);
+  height: 8px;
+  width: 8px;
+  left: 0px;
+  top: 0px;
+  border-width: 0px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 3px;
+  border-style: solid;
+}
+.canceled {
+  background: rgb(255, 194, 96);
+  color: rgb(255, 194, 96);
+  height: 8px;
+  width: 8px;
+  left: 0px;
+  top: 0px;
+  border-width: 0px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 3px;
+  border-style: solid;
+}
+.botton-detail {
+  float: right;
+  margin-right: 20px;
 }
 </style>

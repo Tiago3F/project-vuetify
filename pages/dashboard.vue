@@ -54,10 +54,12 @@
       </v-btn>
 
       <v-btn icon color="#fff">
-        <v-icon>mdi-bell-outline</v-icon>
+        <v-icon> mdi-bell-outline</v-icon>
+        <span class="notify-bell">4</span>
       </v-btn>
       <v-btn icon color="#fff">
         <v-icon>mdi-email-outline</v-icon>
+         <span class="notify-message">3</span>
       </v-btn>
       <div class="user-welcome-message">
         <span>Hi, <strong>John Smith</strong></span>
@@ -81,10 +83,30 @@
           <v-col md="7">
             <FilesVcard />
             <TasksVcard />
-            
           </v-col>
         </v-row>
       </v-container>
+      <v-footer height="80px" color="#fff">
+        <v-row>
+          <v-btn text color="#6c3dff" small>Flatlogic</v-btn>
+          <v-btn text color="#6c3dff" small>About Us</v-btn>
+          <v-btn text color="#6c3dff" small>Blog</v-btn>
+
+          <v-spacer></v-spacer>
+
+          <v-btn elevation="0" fab small>
+            <v-icon>mdi-facebook</v-icon>
+          </v-btn>
+
+          <v-btn elevation="0" fab small>
+            <v-icon>mdi-twitter</v-icon>
+          </v-btn>
+
+          <v-btn elevation="0" fab small>
+            <v-icon>mdi-github</v-icon>
+          </v-btn>
+        </v-row>
+      </v-footer>
     </v-main>
   </v-app>
 </template>
@@ -96,7 +118,7 @@ import PerfilVcard from "../components/perfil-vcard.vue";
 import FilesVcard from "../components/files-vcard.vue";
 import MediaProjectsVcard from "../components/media-projects-vcard.vue";
 import InformativeVcard from "../components/informative-vcard.vue";
-import TasksVcard from "../components/tasks-vcard.vue";
+import TasksVcard from "../components/tasks-calendar-vcard.vue";
 
 export default Vue.extend({
   data() {
@@ -144,5 +166,36 @@ export default Vue.extend({
 
 .app-bar {
   color: #fff;
+}
+
+.notify-bell {
+  border-radius: 10px;
+  font-size: 12px;
+  height: 20px;
+  letter-spacing: 0;
+  min-width: 20px;
+  padding: 4px 6px;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  text-indent: 0;
+  margin-left: 25px;
+  margin-top: -25px;
+  background-color: #ff4081;
+}
+.notify-message {
+  border-radius: 10px;
+  font-size: 12px;
+  height: 20px;
+  letter-spacing: 0;
+  min-width: 20px;
+  padding: 4px 6px;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  text-indent: 0;
+  margin-left: 25px;
+  margin-top: -25px;
+  background-color: #ffc260;
 }
 </style>

@@ -158,73 +158,85 @@
       <v-col md="5">
         <div class="card-projects">
           <v-card class="calendar-card" height="330px" max-width="500px">
-            <v-card-title>Projects </v-card-title>
-            <v-card-text>
-              <div class="font-weight-bold ml-8">Today</div>
+            <v-date-picker
+              class="calendar"
+              color="#6c3dff"
+              width="340px"
+              no-title
+              v-model="date2"
+              :event-color="(date) => (date[9] % 2 ? '#ffc86f' : '#68deb6')"
+              :events="functionEvents"
+            ></v-date-picker>
+          </v-card>
+        </div>
 
-              <v-timeline align-top dense>
-                <v-timeline-item
-                  v-for="projects in project"
-                  :key="projects.name"
-                  :color="projects.color"
-                  small
-                >
-                  <div>
-                    <div class="font-weight-normal">
-                      <strong>{{ projects.name }}</strong>
-                    </div>
-                  </div>
-                </v-timeline-item>
-              </v-timeline>
-            </v-card-text>
+        <div class="viwers-card">
+          <v-card class="views-card" height="200px" max-width="500px">
+            <v-card-title
+              >Views <v-spacer></v-spacer> <v-icon>mdi-dots-vertical</v-icon>
+            </v-card-title>
+            <v-card-subtitle class="mt-2">
+              <h2>7,156</h2>
+              <span class="span">7.2%</span>
+              <v-sparkline
+                class="sparkline"
+                :value="value"
+                color="#ffb2de"
+                fill
+                :smooth="radius"
+              ></v-sparkline>
+
+              <v-btn class="botton-see-more" outlined color="#6c3dff" x-small>
+                See More
+              </v-btn>
+            </v-card-subtitle>
+          </v-card>
+        </div>
+
+        <div class="update-card">
+          <v-card
+            class="views-card"
+            height="100px"
+            max-width="500px"
+            color="#6c3dff"
+          >
+            <v-card-title>
+              <img
+                src="https://templates-flatlogic.herokuapp.com/vue-material/img/update-icon.88cea971.svg"
+              />
+              <p class="views">Updates</p>
+              <v-spacer></v-spacer>
+              <v-btn class="ma-2 mt-3" outlined color="#fff"> Detail </v-btn>
+            </v-card-title>
           </v-card>
         </div>
       </v-col>
     </v-row>
-
-
   </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    project: [
-      {
-        name: "Canary",
-        color: "#6c3dff",
-      },
-      {
-        name: "Mercury",
-        color: "green",
-      },
-      {
-        name: "Yosemite",
-        color: "#6c3dff",
-      },
-      {
-        name: "Sputnik",
-        color: "#6c3dff",
-      },
-    ],
-    today: '2019-01-08',
-      events: [
-        {
-          name: 'Weekly Meeting',
-          start: '2019-01-07 09:00',
-          end: '2019-01-07 10:00',
-        },
-        {
-          name: `Thomas' Birthday`,
-          start: '2019-01-10',
-        },
-        {
-          name: 'Mash Potatoes',
-          start: '2019-01-09 12:30',
-          end: '2019-01-09 15:30',
-        },
-      ],
+    radius: 20,
+    arrayEvents: null,
+    date1: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+      .toISOString()
+      .substr(0, 10),
+    date2: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+      .toISOString()
+      .substr(0, 10),
+    value: [423, 446, 675, 510, 590, 610, 760],
   }),
+  methods: {
+    functionEvents(date) {
+      const [, , day] = date.split("-");
+      if ([12, 17, 28].includes(parseInt(day, 10))) return true;
+      if ([1, 19, 22].includes(parseInt(day, 10)))
+        return ["#ff5992", "#ffc86f"];
+      return false;
+    },
+  },
 };
 </script>
 
@@ -237,5 +249,27 @@ export default {
 .calendar-card {
   margin-top: 50px;
   margin-left: -12px;
+}
+.views-card {
+  margin-top: 50px;
+  margin-left: -12px;
+}
+.calendar {
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.sparkline {
+  padding-left: 50px;
+  margin-top: -25px;
+  margin-left: 30px;
+  width: 330px;
+}
+.botton-see-more {
+  margin-top: -50px;
+}
+.views {
+  color: #fff;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 </style>
