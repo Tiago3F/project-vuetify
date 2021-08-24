@@ -55,12 +55,7 @@
       <v-divider></v-divider>
 
       <v-list>
-        <v-list-item
-          v-for="item in itemsTemplate"
-          :key="item.title"
-          router
-          :to="item.route"
-        >
+        <v-list-item v-for="item in itemsTemplate" :key="item.title" router>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -69,6 +64,15 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-group prepend-icon="mdi-file-document" value="true">
+          <v-list-tile slot="activator">
+            <v-list-tile-title>Forms</v-list-tile-title>
+          </v-list-tile>
+          <v-list-item v-for="form in forms" :key="form.title" :to="form.route">
+            <v-icon>mdi-circle-small</v-icon> {{ form.title }}</v-list-item
+          >
+        </v-list-group>
       </v-list>
 
       <v-divider></v-divider>
@@ -111,12 +115,14 @@ export default {
         { title: "Core", icon: "mdi-apps" },
         { title: "Tables", icon: "mdi-grid-large" },
         { title: "UI Elements", icon: "mdi-image-filter-none" },
-        { title: "Forms", icon: "mdi-file-document", route: "/forms" },
+        // { title: "Forms", icon: "mdi-file-document", route: "/forms" },
         { title: "Charts", icon: "mdi-chart-bar" },
         { title: "Maps", icon: "mdi-map" },
         { title: "Extra", icon: "mdi-star" },
         { title: "Menu Levels", icon: "mdi-folder" },
       ],
+      forms: [{ title: "Form Elements", route: "/forms" }, { title: "Form Validation" }],
+
       itemsHelp: [
         { title: "Library", icon: "mdi-book-variant-multiple" },
         { title: "Support", icon: "mdi-forum" },

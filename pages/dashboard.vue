@@ -41,7 +41,7 @@ import FilesVcard from "../components/files-vcard.vue";
 import MediaProjectsVcard from "../components/media-projects-vcard.vue";
 import InformativeVcard from "../components/informative-vcard.vue";
 import TasksVcard from "../components/tasks-calendar-vcard.vue";
-import Forms from "./forms.vue"
+
 
 export default {
   data() {
@@ -57,7 +57,7 @@ export default {
     MediaProjectsVcard,
     InformativeVcard,
     TasksVcard,
-    Forms,
+
   },
 };
 </script>
