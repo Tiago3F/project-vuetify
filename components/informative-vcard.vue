@@ -1,6 +1,6 @@
 <template>
   <div class="informative-card">
-    <v-card height="350px" max-width="630px">
+    <v-card height="340px" max-width="630px">
       <v-row>
         <v-col md="6">
           <v-card-title>Top 5 react native starter kits </v-card-title>

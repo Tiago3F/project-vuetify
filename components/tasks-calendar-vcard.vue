@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <div class="tasks-card">
-          <v-card height="733px" max-width="500px">
+          <v-card height="725px" max-width="500px">
             <div>
               <v-row>
                 <v-col>
@@ -196,7 +196,7 @@
         <div class="update-card">
           <v-card
             class="views-card"
-            height="100px"
+            height="95px"
             max-width="500px"
             color="#6c3dff"
           >

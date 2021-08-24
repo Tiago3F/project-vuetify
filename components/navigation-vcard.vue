@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card max-width="2000">
+    <v-card class="mt-3" >
       <v-card-actions>
         <v-btn text>App</v-btn>
         <v-icon>mdi-chevron-right</v-icon>
