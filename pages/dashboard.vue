@@ -11,27 +11,6 @@
             <TasksVcard />
           </v-col>
         </v-row>
-      <v-footer height="80px" color="#fff">
-        <v-row>
-          <v-btn text color="#6c3dff" small>Flatlogic</v-btn>
-          <v-btn text color="#6c3dff" small>About Us</v-btn>
-          <v-btn text color="#6c3dff" small>Blog</v-btn>
-
-          <v-spacer></v-spacer>
-
-          <v-btn elevation="0" fab small>
-            <v-icon>mdi-facebook</v-icon>
-          </v-btn>
-
-          <v-btn elevation="0" fab small>
-            <v-icon>mdi-twitter</v-icon>
-          </v-btn>
-
-          <v-btn elevation="0" fab small>
-            <v-icon>mdi-github</v-icon>
-          </v-btn>
-        </v-row>
-      </v-footer>
     </div>
 </template>
 

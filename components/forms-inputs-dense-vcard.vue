@@ -2,7 +2,7 @@
   <div class="form-card">
     <v-row>
       <v-col md="6">
-        <v-card height="650px" max-width="750px">
+        <v-card height="650px">
           <v-card-title
             >Inputs <v-spacer></v-spacer>
             <v-btn icon><v-icon>mdi-dots-vertical</v-icon></v-btn>
@@ -79,7 +79,7 @@
       </v-col>
 
       <v-col md="6">
-        <v-card height="650px" max-width="750px">
+        <v-card height="650px">
           <v-card-title
             >Dense <v-spacer></v-spacer>
             <v-btn icon><v-icon>mdi-dots-vertical</v-icon></v-btn>
@@ -124,36 +124,26 @@
                 </v-col>
 
                 <v-col class="mt-5" cols="12" sm="6" md="6">
-                  <p>Prepend input</p>
+                  <p>Solo</p>
                 </v-col>
 
                 <v-col cols="12" sm="6" md="6">
-                  <v-text-field
-                    label="Username"
-                    prepend-icon="mdi-account"
-                  ></v-text-field>
+                  <v-text-field label="Solo" solo dense></v-text-field>
                 </v-col>
 
                 <v-col class="mt-5" cols="12" sm="6" md="6">
-                  <p>Password</p>
+                  <p>Outlined</p>
                 </v-col>
 
                 <v-col cols="12" sm="6" md="6">
-                  <v-text-field
-                    label="Password"
-                    prepend-icon="mdi-lock"
-                  ></v-text-field>
+                  <v-text-field label="Outlined" outlined dense></v-text-field>
                 </v-col>
-
                 <v-col class="mt-5" cols="12" sm="6" md="6">
-                  <p>Appended input</p>
+                  <p>Outlined</p>
                 </v-col>
 
                 <v-col cols="12" sm="6" md="6">
-                  <v-text-field
-                    label="Append"
-                    append-icon="mdi-map-marker"
-                  ></v-text-field>
+                  <v-text-field label="Outlined" placeholder="placeholder" outlined dense></v-text-field>
                 </v-col>
               </v-row>
             </v-container>
