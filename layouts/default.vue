@@ -87,7 +87,7 @@
     </v-navigation-drawer>
     <v-main>
       <v-container fluid>
-        <NavigationVcard  v-if="$route.path != '/'" />
+        <NavigationVcard v-if="$route.path != '/'" />
         <nuxt />
       </v-container>
     </v-main>
