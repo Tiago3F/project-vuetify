@@ -14,8 +14,8 @@
 
 <script>
 import FormsInputsDense from "../components/forms-inputs-dense-vcard.vue";
-import FormsSelectsInputVariants from  "../components/forms-selects-inputvariants.vue"
-import FormsTextAreas from "../components/forms-textareas.vue"
+import FormsSelectsInputVariants from  "../components/forms-selects-inputvariants-vcard.vue"
+import FormsTextAreas from "../components/forms-textareas-vcard.vue"
 
 export default {
   data() {
