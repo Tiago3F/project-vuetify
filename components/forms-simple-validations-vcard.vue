@@ -70,9 +70,9 @@
                     Reset Form
                   </v-btn>
                   <v-btn
+                  color="#6c3dff"
+                    class="botton-validate"
                     :disabled="!valid"
-                    color="success"
-                    class="mr-4"
                     @click="validate"
                   >
                     Validate
@@ -130,7 +130,10 @@ export default {
 }
 
 .bottons-validations {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 120px;
+}
+.botton-validate {
+  color: #fff;
 }
 </style>
