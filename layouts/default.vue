@@ -142,7 +142,7 @@ export default {
         { title: "Extra", icon: "mdi-star" },
         { title: "Menu Levels", icon: "mdi-folder" },
       ],
-      forms: [{ title: "Form Elements", route: "/forms" }, { title: "Form Validation" }],
+      forms: [{ title: "Form Elements", route: "/formstexts" }, { title: "Form Validation", route: "/formsvalidation" }],
 
       itemsHelp: [
         { title: "Library", icon: "mdi-book-variant-multiple" },
